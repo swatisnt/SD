@@ -1,0 +1,137 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dark color for the text */
+    position: relative; /* Allows the child elements to position correctly */
+}
+
+/* Background Image Styling */
+.background-image {
+    position: fixed; /* Fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    object-fit: cover; /* Cover while maintaining aspect ratio */
+    filter: blur(8px); /* Apply blur to the background image */
+    z-index: -1; /* Positioned below other content */
+}
+
+/* Content Wrapper to keep the text readable */
+.content-wrapper {
+    position: relative;
+    z-index: 1; /* Ensures the content appears above the background */
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeInHeader 2s ease-in-out;
+}
+
+/* Headline Animation */
+h1, h2 {
+    opacity: 0;
+    animation: fadeInText 1.5s forwards;
+}
+
+/* Darker and Bigger Text */
+h1 {
+    animation-delay: 0.5s;
+    font-size: 2.5em; /* Increased font size */
+    color: #111; /* Darker color for the heading */
+}
+
+h2 {
+    animation-delay: 1s;
+    font-size: 2em; /* Increased font size */
+    color: #222; /* Darker color for the subheading */
+}
+
+/* Fade-in Keyframes */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in Keyframes for Header */
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for the main section */
+    border-radius: 8px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.2em; /* Increased font size for paragraphs */
+    color: #333; /* Ensures paragraphs are dark */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* List Styling */
+ul {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 40px; /* Add indentation to lists */
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
